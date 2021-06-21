@@ -5,9 +5,9 @@ class TreeNode(object):
          self.right = right
 
     def __str__(self):
+        print(self.data),
         if self.left:
             self.left.__str__()
-        print(self.data),
         if self.right:
             self.right.__str__()
 
