@@ -26,5 +26,18 @@ class TreeNode(object):
         else:
             self.data = data
 
+    def insertNode(self, node):
+        if self.data:
+            if node.data < self.data:
+                if self.left is None:
+                    self.left = node
+                else:
+                    self.left.insertNode(node)
+            elif node.data > self.data:
+                if self.right is None:
+                    self.right = node
+                else:
+                    self.right.insertNode(node)
+
 
 
